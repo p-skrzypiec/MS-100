@@ -1,0 +1,1 @@
+Get-ADUser -Filter * -Properties SamAccountName | ForEach-Object { Set-ADUser $_  -UserPrincipalName ($_.SamAccountName + "@lt.ragdoll.website" )}
